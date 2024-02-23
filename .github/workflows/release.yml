@@ -44,8 +44,16 @@ jobs:
           cd ../..
           rm -rf tmp
 
+      - name: debug
+        run: |
+          set -ex
+          pwd
+          git describe
+          git show
+          git show 0.31.0
+
       - name: Create GitHub release
-        uses: cockpit-project/action-release@88d994da62d1451c7073e26748c18413fcdf46e9
+        uses: cockpit-project/action-release@debug
         with:
           filename: "dist/python-dbusmock-${{ github.ref_name }}.tar.gz"
 
