@@ -45,7 +45,7 @@ jobs:
           rm -rf tmp
 
       - name: Create GitHub release
-        uses: cockpit-project/action-release@88d994da62d1451c7073e26748c18413fcdf46e9
+        uses: cockpit-project/action-release@8c426b5615e736e1855f5b266be752b7a8661826
         with:
           filename: "dist/python-dbusmock-${{ github.ref_name }}.tar.gz"
 
